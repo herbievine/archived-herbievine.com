@@ -28,7 +28,17 @@
             </form>
         </div>
         <div class="result">
-            <p>{{ error ? 'sorry, something went wrong' : '' }}</p>
+            <p>
+                {{
+                    isSending
+                        ? 'sending'
+                        : success
+                        ? 'added'
+                        : error
+                        ? 'sorry, something went wrong'
+                        : ''
+                }}
+            </p>
         </div>
     </div>
 </template>
@@ -46,10 +56,14 @@ export default {
                 url: null,
             },
             error: null,
+            success: null,
+            isSending: null,
         };
     },
     methods: {
         add() {
+            this.isSending = true;
+
             const addProject = firebase.functions().httpsCallable('addProject');
 
             addProject({
@@ -58,8 +72,15 @@ export default {
                 url: this.data.url,
                 urlAnalytics: `${this.data.url}?utm_source=portfolio&utm_medium=banner`,
             })
-                .then(res => console.log(res))
-                .catch(e => (this.error = e));
+                .then(() => {
+                    this.success = true;
+                    this.error = null;
+                })
+                .catch(e => {
+                    this.error = e;
+                    this.success = null;
+                })
+                .finally(() => this.isSending = false);
         },
     },
 };
