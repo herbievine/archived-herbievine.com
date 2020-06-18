@@ -1,0 +1,12 @@
+<svg id="H" xmlns="http://www.w3.org/2000/svg" width="2000" height="2000" viewBox="0 0 2000 2000">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #254e61;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="H-2" data-name="H" class="cls-1" d="M85.484,402.031h829v1147h-829v-1147Zm0,0,414.5,573.039,414.5-573.039M499.984,975.07l414.5,573.96h-829Z"/>
+  <path id="V-2" data-name="V" class="cls-1" d="M1470.38,1549.03L1000.06,402.187l943.9,2.646Z"/>
+</svg>

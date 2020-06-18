@@ -1,0 +1,62 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@3.0.0
+
+jobs:
+  build-and-deploy:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install:
+          install-yarn: true
+          node-version: latest
+      - restore_cache:
+          keys:
+            - v1-npm-deps-{{ checksum "package-lock.json" }}
+            - v1-npm-deps-
+      - run:
+          name: Install dependencies
+          command: >
+            npm i &&
+            cd functions
+            && npm i
+      - save_cache:
+          key: v1-npm-deps-{{ checksum "package-lock.json" }}
+          paths:
+            - ./node_modules
+            - ./functions/node_modules
+      - run:
+          name: Lint
+          command: >
+            npm run lint &&
+            cd functions &&
+            npm run lint
+      - run:
+          name: Build
+          command: >
+            npm run build &&
+            npm run electron:build
+      - run:
+          name: Install firebase-tools
+          command: npm i -D firebase-tools@latest
+      - run:
+          name: Firebase setup
+          command: >
+            ./node_modules/.bin/firebase use --add vineherbie-a383a &&
+            ./node_modules/.bin/firebase target:apply hosting testing vineherbie-a383a &&
+            ./node_modules/.bin/firebase target:apply hosting production vineherbie
+      - run:
+          name: Deploy hosting to test (vineherbie-a383a)
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting:testing --project vineherbie-a383a
+      - run:
+          name: Deploy hosting to production (herbievine.com)
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only hosting:production --project vineherbie-a383a
+      - run:
+          name: Deploy cloud functions
+          command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN" --only functions --project vineherbie-a383a
+
+workflows:
+  firebase:
+    jobs:
+      - build-and-deploy
