@@ -12,7 +12,7 @@ Vue.config.productionTip = false;
 
 const firebaseConfig = {
     apiKey: 'AIzaSyDkYuqnf_59DDUq5eukN_ycTGKzZ9LaVdY',
-    authDomain: 'vineherbie-a383a.firebaseapp.com',
+    authDomain: 'herbievine.com',
     databaseURL: 'https://vineherbie-a383a.firebaseio.com',
     projectId: 'vineherbie-a383a',
     storageBucket: 'vineherbie-a383a.appspot.com',
