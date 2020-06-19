@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import firebase from 'firebase';
 import 'firebase/firestore';
+import moment from 'moment';
 
 Vue.use(Vuex);
 
@@ -25,8 +26,14 @@ export default new Vuex.Store({
 
                     querySnapshot.forEach(doc => {
                         if (!doc.data()) return;
-                        projects.push(doc.data());
+
+                        let project = doc.data();
+                        project.unix = moment(doc.data().createdAt, 'MMMM Do YYYY').unix();
+
+                        projects.push(project);
                     });
+
+                    projects.sort((a, b) => -(a.unix - b.unix));
 
                     commit('setProjects', projects);
                 })
