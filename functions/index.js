@@ -36,7 +36,7 @@ exports.addProject = functions.region('us-central1', 'europe-west1').https.onCal
 
     const db = admin.firestore();
 
-    id = uuidv4();
+    const id = uuidv4();
 
     return new Promise((resolve, reject) => {
         db.collection('projects')
@@ -46,9 +46,9 @@ exports.addProject = functions.region('us-central1', 'europe-west1').https.onCal
                 createdAt: moment().format('MMMM Do YYYY'),
                 title: data.title,
                 description: data.desc,
-                url: `${data.url}${id}`,
-                urlGithub: `https://herbievine.com/redirect?t=${encodeURI(data.github)}`,
-                urlAnalytics: `${data.url}${id}?utm_source=portfolio&utm_medium=banner`,
+                urlPortfolio: `https://herbievine.com/work/${id}`,
+                urlGithub: `https://herbievine.com/redirect?t=${encodeURI(`https://github.com/herbievine/${data.github}`)}`,
+                urlProject: data.url,
             })
             .then(() => {
                 return resolve({

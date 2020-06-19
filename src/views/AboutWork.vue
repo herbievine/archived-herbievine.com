@@ -10,8 +10,8 @@
             <div class="links">
                 <div class="info">
                     <a
-                        v-if="project.urlAnalytics"
-                        :href="project.urlAnalytics"
+                        v-if="project.urlProject"
+                        :href="project.urlProject"
                         target="_BLANK"
                     >
                         See Website

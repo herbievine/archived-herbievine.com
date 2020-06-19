@@ -17,11 +17,18 @@
                     placeholder="description"
                     v-model="data.desc"
                 />
+                <label for="github"></label>
+                <input
+                        class="input"
+                        id="github"
+                        placeholder="github name"
+                        v-model="data.github"
+                />
                 <label for="url"></label>
                 <input
                     class="input"
                     id="url"
-                    placeholder="url"
+                    placeholder="site url"
                     v-model="data.url"
                 />
                 <button class="button">submit</button>
@@ -53,6 +60,7 @@ export default {
             data: {
                 title: null,
                 desc: null,
+                github: null,
                 url: null,
             },
             error: null,
@@ -69,8 +77,8 @@ export default {
             addProject({
                 title: this.data.title,
                 desc: this.data.desc,
+                github: this.data.github,
                 url: this.data.url,
-                urlAnalytics: `${this.data.url}?utm_source=portfolio&utm_medium=banner`,
             })
                 .then(() => {
                     this.success = true;
@@ -80,7 +88,7 @@ export default {
                     this.error = e;
                     this.success = null;
                 })
-                .finally(() => this.isSending = false);
+                .finally(() => (this.isSending = false));
         },
     },
 };

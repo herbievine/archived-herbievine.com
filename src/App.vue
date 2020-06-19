@@ -38,7 +38,7 @@ export default {
         if (this.isSafari)
             console.warn(
                 '[SAFARI ERROR]: Site not 100% compatible with Safari. ' +
-                'Please use Chrome or Firefox for a better experience'
+                    'Please use Chrome or Firefox for a better experience'
             );
         else firebase.analytics();
     },
