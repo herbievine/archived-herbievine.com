@@ -63,10 +63,10 @@ exports.addProject = functions.region('us-central1', 'europe-west1').https.onCal
 });
 
 exports.sendMail = functions.region('us-central1', 'europe-west1').https.onCall(async (data, context) => {
-    const { v4: uuidv4 } = require('uuid');
-    const moment = require('moment');
-    const nodemailer = require('nodemailer');
-    const cors = require('cors')({ origin: true });
+    const { v4: uuidv4 } = await require('uuid');
+    const moment = await require('moment');
+    const nodemailer = await require('nodemailer');
+    const cors = await require('cors')({ origin: true });
 
     const template = (email, message, fullName, ref) => {
         return `

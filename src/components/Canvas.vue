@@ -24,7 +24,7 @@ export default {
                 let isHovered = false;
 
                 const particles = [];
-                const limit = Math.ceil(window.innerWidth / 50);
+                const limit = Math.ceil(window.innerWidth / 60);
 
                 p5.setup = () => {
                     p5.createCanvas(window.innerWidth, window.innerHeight);
@@ -124,7 +124,7 @@ export default {
                             p5.random(-1, 1),
                             p5.random(-1, 1)
                         );
-                        this.size = 10;
+                        this.size = 8;
                     }
 
                     update() {
