@@ -74,7 +74,7 @@ export default {
 
 <style scoped lang="scss">
 .home {
-    width: 70%;
+    width: 80%;
     margin: 150px auto 60px auto;
     max-width: 420px;
 
