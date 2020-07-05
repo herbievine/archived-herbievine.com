@@ -117,7 +117,7 @@ exports.sendMail = functions.region('us-central1', 'europe-west1').https.onCall(
                     service: 'gmail',
                     auth: {
                         user: 'herbievine.contact@gmail.com',
-                        pass: functions.config().pass || 'QY5mU4tCZ867zFn',
+                        pass: functions.config().pass,
                     }
                 });
 
