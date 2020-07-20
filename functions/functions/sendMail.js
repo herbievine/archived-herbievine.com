@@ -1,8 +1,5 @@
 const functions = require('firebase-functions');
 
-const admin = require('firebase-admin');
-admin.initializeApp(functions.config().firebase);
-
 exports.sendMail = functions
     .region('us-central1', 'europe-west1')
     .https.onCall(async (data, context) => {
