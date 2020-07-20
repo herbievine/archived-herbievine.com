@@ -19,8 +19,9 @@ jobs:
           name: Install dependencies
           command: >
             npm i &&
-            cd functions
-            && npm i
+            cd functions &&
+            npm i &&
+            npm i -g typescript
       - save_cache:
           key: v1-npm-deps-{{ checksum "package-lock.json" }}
           paths:
@@ -36,7 +37,9 @@ jobs:
           name: Build
           command: >
             npm run build &&
-            npm run electron:build
+            npm run electron:build &&
+            cd functions &&
+            npm run build
       - run:
           name: Install firebase-tools
           command: npm i -D firebase-tools@latest

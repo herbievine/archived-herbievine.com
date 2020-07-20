@@ -90,16 +90,16 @@ const sendMail: Function = functions
 
                     return transporter.sendMail(mailOptions, (e: any) => {
                         if (e) {
-                            return reject(e);
+                            reject(e);
                         } else {
-                            return resolve({
+                            resolve({
                                 status: 200,
                             });
                         }
                     });
                 })
                 .catch((e: any) => {
-                    return reject(e);
+                    reject(e);
                 });
         });
     });

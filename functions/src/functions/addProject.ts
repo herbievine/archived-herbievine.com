@@ -33,12 +33,12 @@ const addProject: Function = functions
                     urlProject: data.url,
                 })
                 .then(() => {
-                    return resolve({
+                    resolve({
                         status: 200,
                     });
                 })
                 .catch((e: Error) => {
-                    return reject(e);
+                    reject(e);
                 });
         });
     });
