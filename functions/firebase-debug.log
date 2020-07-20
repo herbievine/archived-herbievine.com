@@ -1,0 +1,92 @@
+[debug] [2020-07-20T19:05:31.671Z] ----------------------------------------------------------------------
+[debug] [2020-07-20T19:05:31.675Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vineh\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js functions:shell
+[debug] [2020-07-20T19:05:31.675Z] CLI Version:   8.4.2
+[debug] [2020-07-20T19:05:31.675Z] Platform:      win32
+[debug] [2020-07-20T19:05:31.675Z] Node Version:  v12.16.1
+[debug] [2020-07-20T19:05:31.683Z] Time:          Mon Jul 20 2020 21:05:31 GMT+0200 (Central European Summer Time)
+[debug] [2020-07-20T19:05:31.684Z] ----------------------------------------------------------------------
+[debug] [2020-07-20T19:05:31.684Z] 
+[debug] [2020-07-20T19:05:31.697Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-20T19:05:31.698Z] > authorizing via signed-in user
+[debug] [2020-07-20T19:05:31.699Z] [iam] checking project vineherbie-a383a for permissions ["firebase.projects.get"]
+[debug] [2020-07-20T19:05:31.702Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-07-20T19:05:31.703Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-07-20T19:05:31.952Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Jul 2020 19:07:12 GMT","server":"scaffolding on HTTPServer2","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-20T19:05:31.960Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/vineherbie-a383a:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-07-20T19:05:32.679Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Mon, 20 Jul 2020 19:07:12 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=572","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[warn] !  Your requested "node" version "10" doesn't match your global version "12" {"metadata":{"emulator":{"name":"functions"},"message":"Your requested \"node\" version \"10\" doesn't match your global version \"12\""}}
+[debug] [2020-07-20T19:05:34.708Z] [functions] Watching "C:\Users\vineh\WebstormProjects\herbievine.com\functions" for Cloud Functions...
+[debug] [2020-07-20T19:05:34.725Z] DEBUG: [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-07-20T19:05:34.726Z] DEBUG: [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-07-20T19:05:34.726Z] DEBUG: [worker-pool] submitWork(triggerId=)
+[debug] [2020-07-20T19:05:34.727Z] DEBUG: [worker-~diagnostic~-456ef6f1-6be1-46a1-80e2-529fb8abcc07]: Assigning socketPath: \\?\pipe\C:\Users\vineh\WebstormProjects\herbievine.com\functions\6236
+[debug] [2020-07-20T19:05:34.727Z] DEBUG: [worker-~diagnostic~-456ef6f1-6be1-46a1-80e2-529fb8abcc07]: BUSY
+[debug] [2020-07-20T19:05:35.235Z] DEBUG: [runtime-status] [6236] Functions runtime initialized. {"cwd":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions","node_version":"12.16.1"}
+[debug] [2020-07-20T19:05:35.236Z] DEBUG: [runtime-status] [6236] Disabled runtime features: undefined
+[debug] [2020-07-20T19:05:35.241Z] DEBUG: [runtime-status] [6236] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-07-20T19:05:35.246Z] DEBUG: [runtime-status] [6236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:05:35.249Z] DEBUG: [runtime-status] [6236] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-07-20T19:05:35.250Z] DEBUG: [runtime-status] [6236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:05:35.320Z] DEBUG: [runtime-status] [6236] Checked functions.config() {"config":{}}
+[debug] [2020-07-20T19:05:35.320Z] DEBUG: [runtime-status] [6236] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-07-20T19:05:35.321Z] DEBUG: [runtime-status] [6236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:05:35.322Z] DEBUG: [runtime-status] [6236] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-07-20T19:05:35.323Z] DEBUG: [runtime-status] [6236] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:05:35.323Z] DEBUG: [runtime-status] [6236] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[warn] !  It looks like you're trying to access functions.config().firebase but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator {"metadata":{"emulator":{"name":"functions"},"message":"It looks like you're trying to access functions.config().firebase but there is no value there. You can learn more about setting up config here: https://firebase.google.com/docs/functions/local-emulator"}}
+[debug] [2020-07-20T19:05:35.327Z] DEBUG: [runtime-status] [6236] initializeApp(DEFAULT) {"databaseURL":"https://vineherbie-a383a.firebaseio.com","storageBucket":"vineherbie-a383a.appspot.com","projectId":"vineherbie-a383a"}
+[debug] [2020-07-20T19:05:35.333Z] [functions[sendMail]] http function initialized (http://localhost:5000/vineherbie-a383a/us-central1/sendMail).
+[debug] [2020-07-20T19:05:35.333Z] [functions[addProject]] http function initialized (http://localhost:5000/vineherbie-a383a/us-central1/addProject).
+[info] i  functions: Loaded functions: sendMail, addProject 
+[warn] !  functions: The following emulators are not running, calls to these services will affect production: firestore, database, pubsub 
+[debug] [2020-07-20T19:05:35.355Z] DEBUG: [worker-~diagnostic~-456ef6f1-6be1-46a1-80e2-529fb8abcc07]: IDLE
+[debug] [2020-07-20T19:07:28.599Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-07-20T19:07:28.599Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-07-20T19:07:28.599Z] Accepted request POST /vineherbie-a383a/us-central1/addProject --> addProject
+[debug] [2020-07-20T19:07:28.608Z] DEBUG: [worker-pool] addWorker(addProject)
+[debug] [2020-07-20T19:07:28.609Z] DEBUG: [worker-pool] Adding worker with key addProject, total=1
+[debug] [2020-07-20T19:07:28.609Z] DEBUG: [worker-pool] submitWork(triggerId=addProject)
+[debug] [2020-07-20T19:07:28.609Z] DEBUG: [worker-addProject-fe256b43-1c19-4649-b1eb-1522e82af6ed]: Assigning socketPath: \\?\pipe\C:\Users\vineh\WebstormProjects\herbievine.com\functions\8528
+[debug] [2020-07-20T19:07:28.609Z] DEBUG: [worker-addProject-fe256b43-1c19-4649-b1eb-1522e82af6ed]: BUSY
+[debug] [2020-07-20T19:07:29.066Z] DEBUG: [runtime-status] [8528] Functions runtime initialized. {"cwd":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions","node_version":"12.16.1"}
+[debug] [2020-07-20T19:07:29.071Z] DEBUG: [runtime-status] [8528] Disabled runtime features: undefined
+[debug] [2020-07-20T19:07:29.078Z] DEBUG: [runtime-status] [8528] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-07-20T19:07:29.079Z] DEBUG: [runtime-status] [8528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:07:29.082Z] DEBUG: [runtime-status] [8528] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}]
+[debug] [2020-07-20T19:07:29.082Z] DEBUG: [runtime-status] [8528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:07:29.151Z] DEBUG: [runtime-status] [8528] Checked functions.config() {"config":{}}
+[debug] [2020-07-20T19:07:29.151Z] DEBUG: [runtime-status] [8528] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}}
+[debug] [2020-07-20T19:07:29.152Z] DEBUG: [runtime-status] [8528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:07:29.153Z] DEBUG: [runtime-status] [8528] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-07-20T19:07:29.154Z] DEBUG: [runtime-status] [8528] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.8.0","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-07-20T19:07:29.154Z] DEBUG: [runtime-status] [8528] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"8.12.1","resolution":"C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\firebase-admin\\lib\\index.js"}}
+[debug] [2020-07-20T19:07:29.157Z] DEBUG: [runtime-status] [8528] initializeApp(DEFAULT) {"databaseURL":"https://vineherbie-a383a.firebaseio.com","storageBucket":"vineherbie-a383a.appspot.com","projectId":"vineherbie-a383a"}
+[debug] [2020-07-20T19:07:29.163Z] DEBUG: [runtime-status] [8528] Trigger "addProject" has been found, beginning invocation!
+[debug] [2020-07-20T19:07:29.163Z] [functions] Beginning execution of "addProject"
+[debug] [2020-07-20T19:07:29.163Z] DEBUG: [runtime-status] [8528] triggerDefinition {"regions":["us-central1","europe-west1"],"httpsTrigger":{},"labels":{"deployment-callable":"true"},"name":"addProject","entryPoint":"addProject"}
+[debug] [2020-07-20T19:07:29.164Z] DEBUG: [runtime-status] [8528] Running addProject in mode HTTPS
+[debug] [2020-07-20T19:07:29.168Z] DEBUG: [runtime-status] [8528] Attempting to listen to socketPath: \\?\pipe\C:\Users\vineh\WebstormProjects\herbievine.com\functions\8528
+[debug] [2020-07-20T19:07:29.173Z] DEBUG: [functions] Runtime ready! Sending request!
+[debug] [2020-07-20T19:07:29.203Z] DEBUG: [runtime-status] [8528] Ephemeral server handling POST request
+[debug] [2020-07-20T19:07:29.205Z] DEBUG: [runtime-status] [8528] No callable functions auth found
+[warn] !  functions: The Cloud Firestore emulator is not running, so calls to Firestore will affect production. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"The Cloud Firestore emulator is not running, so calls to Firestore will affect production."}}
+[debug] [2020-07-20T19:07:29.960Z] DEBUG: [runtime-status] [8528] Ephemeral server survived.
+[warn] !  External network resource requested!
+   - URL: "http://169.254.169.254/computeMetadata/v1/instance"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"External network resource requested!\n   - URL: \"http://169.254.169.254/computeMetadata/v1/instance\"\n - Be careful, this may be a production service."}}
+[warn] !  External network resource requested!
+   - URL: "http://metadata.google.internal./computeMetadata/v1/instance"
+ - Be careful, this may be a production service. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"External network resource requested!\n   - URL: \"http://metadata.google.internal./computeMetadata/v1/instance\"\n - Be careful, this may be a production service."}}
+[info] >  Unhandled error Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information. {"user":"Unhandled error Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.","metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"\u001b[90m> \u001b[39m Unhandled error Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information."}}
+[info] >      at GoogleAuth.getApplicationDefaultAsync (C:\Users\vineh\WebstormProjects\herbievine.com\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:160:19) {"user":"    at GoogleAuth.getApplicationDefaultAsync (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-auth-library\\build\\src\\auth\\googleauth.js:160:19)","metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"\u001b[90m> \u001b[39m     at GoogleAuth.getApplicationDefaultAsync (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-auth-library\\build\\src\\auth\\googleauth.js:160:19)"}}
+[info] >      at processTicksAndRejections (internal/process/task_queues.js:97:5) {"user":"    at processTicksAndRejections (internal/process/task_queues.js:97:5)","metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"\u001b[90m> \u001b[39m     at processTicksAndRejections (internal/process/task_queues.js:97:5)"}}
+[info] >      at async GoogleAuth.getClient (C:\Users\vineh\WebstormProjects\herbievine.com\functions\node_modules\google-auth-library\build\src\auth\googleauth.js:502:17) {"user":"    at async GoogleAuth.getClient (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-auth-library\\build\\src\\auth\\googleauth.js:502:17)","metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"\u001b[90m> \u001b[39m     at async GoogleAuth.getClient (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-auth-library\\build\\src\\auth\\googleauth.js:502:17)"}}
+[info] >      at async GrpcClient._getCredentials (C:\Users\vineh\WebstormProjects\herbievine.com\functions\node_modules\google-gax\build\src\grpc.js:92:24) {"user":"    at async GrpcClient._getCredentials (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-gax\\build\\src\\grpc.js:92:24)","metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"\u001b[90m> \u001b[39m     at async GrpcClient._getCredentials (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-gax\\build\\src\\grpc.js:92:24)"}}
+[info] >      at async GrpcClient.createStub (C:\Users\vineh\WebstormProjects\herbievine.com\functions\node_modules\google-gax\build\src\grpc.js:213:23) {"user":"    at async GrpcClient.createStub (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-gax\\build\\src\\grpc.js:213:23)","metadata":{"emulator":{"name":"functions"},"function":{"name":"addProject"},"message":"\u001b[90m> \u001b[39m     at async GrpcClient.createStub (C:\\Users\\vineh\\WebstormProjects\\herbievine.com\\functions\\node_modules\\google-gax\\build\\src\\grpc.js:213:23)"}}
+[debug] [2020-07-20T19:07:30.001Z] [functions] Finished "addProject" in ~1s
+[debug] [2020-07-20T19:07:30.002Z] DEBUG: [worker-addProject-fe256b43-1c19-4649-b1eb-1522e82af6ed]: IDLE
+[debug] [2020-07-20T19:07:30.002Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-07-20T19:07:44.726Z] DEBUG: [worker-addProject-fe256b43-1c19-4649-b1eb-1522e82af6ed]: exited
+[debug] [2020-07-20T19:07:44.726Z] DEBUG: [worker-addProject-fe256b43-1c19-4649-b1eb-1522e82af6ed]: FINISHED
