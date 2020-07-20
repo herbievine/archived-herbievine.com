@@ -116,8 +116,8 @@ export default {
             targets: '.st0',
             strokeDashoffset: [anime.setDashoffset, 0],
             easing: 'easeInOutQuint',
-            duration: 3000,
-            delay: (el, i) => i * 150,
+            duration: 3200,
+            delay: (el, i) => i * 100,
             direction: 'alternate',
             loop: false,
             begin: () => {
@@ -162,8 +162,8 @@ export default {
     align-items: center;
 
     & svg {
-        width: calc(100% * 0.9);
-        max-width: 1000px;
+        width: calc(100% * 0.95);
+        max-width: 600px;
     }
 }
 
@@ -172,18 +172,7 @@ export default {
     stroke: #cccccc;
     stroke-miterlimit: 10;
     opacity: 1;
-}
-
-@media only screen and (min-width: 1199px) {
-    .st0 {
-        stroke-width: 2;
-    }
-}
-
-@media only screen and (max-width: 1200px) {
-    .st0 {
-        stroke-width: 4;
-    }
+    stroke-width: 4;
 }
 
 .finished {
