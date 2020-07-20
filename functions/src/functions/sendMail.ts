@@ -1,15 +1,28 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
 
-exports.sendMail = functions
+type Data = {
+    fullName: string;
+    email: string;
+    subject: string;
+    message: string;
+};
+
+const sendMail: Function = functions
     .region('us-central1', 'europe-west1')
-    .https.onCall(async (data, context) => {
+    .https.onCall(async (data: Data) => {
         const { kimp } = await require('kimp');
         const moment = await require('moment');
         const nodemailer = await require('nodemailer');
-        const cors = await require('cors')({ origin: true });
 
-        const template = (email, message, fullName, ref) => {
+        await require('cors')({ origin: true });
+
+        const template = (
+            email: string,
+            message: string,
+            fullName: string,
+            ref: string
+        ) => {
             return `
             <div style="
                 color: #333333;
@@ -64,7 +77,7 @@ exports.sendMail = functions
 
                     const mailOptions = {
                         from: `"${data.fullName}" <${data.email}>`,
-                        to: functions.config().email.my-email,
+                        to: functions.config().email.myemail,
                         subject: data.subject,
                         text: `Email: ${data.email} || Message: ${data.message}`,
                         html: template(
@@ -75,7 +88,7 @@ exports.sendMail = functions
                         ),
                     };
 
-                    return transporter.sendMail(mailOptions, (e, i) => {
+                    return transporter.sendMail(mailOptions, (e: any) => {
                         if (e) {
                             return reject(e);
                         } else {
@@ -85,8 +98,10 @@ exports.sendMail = functions
                         }
                     });
                 })
-                .catch(e => {
+                .catch((e: any) => {
                     return reject(e);
                 });
         });
     });
+
+export { sendMail };

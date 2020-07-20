@@ -1,9 +1,16 @@
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+import * as functions from 'firebase-functions';
+import * as admin from 'firebase-admin';
 
-exports.addProject = functions
+type Data = {
+    title: string;
+    desc: string;
+    github: string;
+    url: URL;
+};
+
+const addProject: Function = functions
     .region('us-central1', 'europe-west1')
-    .https.onCall(async (data, context) => {
+    .https.onCall(async (data: Data) => {
         const { kimp } = require('kimp');
         const moment = require('moment');
 
@@ -30,9 +37,10 @@ exports.addProject = functions
                         status: 200,
                     });
                 })
-                .catch(e => {
-                    console.log(e);
+                .catch((e: Error) => {
                     return reject(e);
                 });
         });
     });
+
+export { addProject };
