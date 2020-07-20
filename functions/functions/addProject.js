@@ -1,4 +1,5 @@
 const functions = require('firebase-functions');
+const admin = require('firebase-admin');
 
 exports.addProject = functions
     .region('us-central1', 'europe-west1')
